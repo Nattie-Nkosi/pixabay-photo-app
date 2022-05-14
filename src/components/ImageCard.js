@@ -1,9 +1,5 @@
 import React, { Component } from "react";
-
-/* 
-  TODO: 
-  TODO: 
-*/
+import { Link } from "react-router-dom";
 
 class ImageCard extends Component {
   constructor(props) {
@@ -32,7 +28,9 @@ class ImageCard extends Component {
 
     return (
       <div style={{ gridRowEnd: `span ${this.state.spans}` }}>
-        <img ref={this.imageRef} alt={tags} src={largeImageURL} />
+        <Link to="/">
+          <img ref={this.imageRef} alt={tags} src={largeImageURL} />
+        </Link>
       </div>
     );
   }
