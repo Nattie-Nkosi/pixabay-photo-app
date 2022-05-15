@@ -8,6 +8,9 @@
 # testing
 /coverage
 
+# Pixabay API keys
+config.js
+
 # production
 /build
 

@@ -1,17 +1,19 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router } from "react-router-dom";
 import pixabay from "../api/pixabay";
 import SearchBar from "./SearchBar";
 import ImageList from "./ImageList";
+import config from "../config";
 
-/* This is a Parent Component */
+// access_key contains the Pixabay API keys
+const access_key = config.access_key;
+
 class App extends Component {
   state = { images: [] };
 
   onSearchSubmit = async (term) => {
     const response = await pixabay.get("/api/", {
       params: {
-        key: "27369439-109e49024edf38b4bfd684f4c",
+        key: access_key,
         q: term,
         lang: "en",
         image_type: "all",
@@ -25,12 +27,10 @@ class App extends Component {
 
   render() {
     return (
-      <Router>
-        <div className="ui container" style={{ marginTop: "10px" }}>
-          <SearchBar onSubmit={this.onSearchSubmit} />
-          <ImageList images={this.state.images} />
-        </div>
-      </Router>
+      <div className="ui container" style={{ marginTop: "10px" }}>
+        <SearchBar onSubmit={this.onSearchSubmit} />
+        <ImageList images={this.state.images} />
+      </div>
     );
   }
 }

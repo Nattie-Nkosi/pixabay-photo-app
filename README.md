@@ -1,5 +1,20 @@
 # Review of the React App
 
+### How to run the app
+
+- Open src folder and create a file called `config.js` to insect your own Pixabay API keys.
+- Inside config file insect this code below.
+
+```js
+const config = {
+  access_key: "YOUR PIXABAY API KEY",
+};
+
+export default config;
+```
+
+- Go to your Terminal or CMD and type `npm run start` to run the APP.
+
 ### App Component
 
 - The main component which displays all components.
@@ -18,3 +33,7 @@
 - Listing images to be displayed in grid layout.
 - Learned how to map through a given array using map funtion.
 - Give each image a unique key when it is rendered on the screen.
+
+```
+
+```
