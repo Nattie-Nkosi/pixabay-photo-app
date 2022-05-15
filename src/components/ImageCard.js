@@ -17,17 +17,35 @@ class ImageCard extends Component {
   setSpans = () => {
     const height = this.imageRef.current.clientHeight;
 
-    const spans = Math.ceil(height / 10);
+    const spans = Math.ceil(height / 4.5);
 
     this.setState({ spans });
   };
 
   render() {
-    const { tags, largeImageURL } = this.props.image;
+    const { tags, largeImageURL, user, views, downloads, imageSize } =
+      this.props.image;
 
     return (
-      <div style={{ gridRowEnd: `span ${this.state.spans}` }}>
-        <img ref={this.imageRef} alt={tags} src={largeImageURL} />
+      <div className="image" style={{ gridRowEnd: `span ${this.state.spans}` }}>
+        <div className="ui card">
+          <div className="image">
+            <img ref={this.imageRef} alt={tags} src={largeImageURL} />
+          </div>
+          <div className="content">
+            <p className="header">{user}</p>
+            <div className="meta">
+              <span className="date">{views} views</span>
+            </div>
+            <div className="description">{downloads} downloads</div>
+          </div>
+          <div className="extra content">
+            <a>
+              <i className="user icon"></i>
+              {imageSize} image size
+            </a>
+          </div>
+        </div>
       </div>
     );
   }

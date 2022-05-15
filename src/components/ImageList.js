@@ -7,6 +7,7 @@ const ImageList = (props) => {
     return <ImageCard key={image.id} image={image} />;
   });
 
+  console.log(images);
   return <div className="image-list">{images}</div>;
 };
 
