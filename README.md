@@ -2,7 +2,7 @@
 
 ### How to run the app
 
-- Run `npm start`.
+- Run `npm install` to install dependencies.
 - Open src folder and create a file called `config.js` to insect your own Pixabay API keys.
 - Inside config file insect this code below.
 
