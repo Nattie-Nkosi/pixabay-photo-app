@@ -17,10 +17,10 @@ export default config;
 
 ### App Component
 
-- The main component which displays all components.
-- This is where I initialize an image state object to an empty array.
-- Then I made a network request to Pixabay API using axios.
-- Then the state object is updated using setState object which makes the app component rerender.
+- The main component which renders all components.
+- This is where I initialize an images state object to an empty array.
+- Then I made a network request to Pixabay API using axios library.
+- Then the state object is updated using setState object which makes the app component and other components rerender.
 
 ### The SearchBar Component
 
@@ -33,7 +33,3 @@ export default config;
 - Listing images to be displayed in grid layout.
 - Learned how to map through a given array using map funtion.
 - Give each image a unique key when it is rendered on the screen.
-
-```
-
-```

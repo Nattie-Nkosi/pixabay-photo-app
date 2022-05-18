@@ -9,7 +9,7 @@ class ImageCard extends Component {
     this.imageRef = React.createRef();
   }
 
-  // componentDidMount is will be called after the component is rendered
+  // componentDidMount will be called after the component is rendered
   componentDidMount() {
     this.imageRef.current.addEventListener("load", this.setSpans);
   }
@@ -40,8 +40,8 @@ class ImageCard extends Component {
             <div className="description">{downloads} downloads</div>
           </div>
           <div className="extra content">
-            <a>
-              <i className="user icon"></i>
+            <a href="#">
+              <i className="image outline icon"></i>
               {imageSize} image size
             </a>
           </div>
